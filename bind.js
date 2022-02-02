@@ -23,3 +23,4 @@ class Button {
 }
 
 const btn = new Button();
+console.log(btn);
