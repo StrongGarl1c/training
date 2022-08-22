@@ -1,13 +1,15 @@
-const arr = Array(1000000).fill(1).map((item,index) => item += index )
+const arr = Array(1000).fill(1).map((item,index) => item += index )
 
 function search(list, target) {
   let start = 0;
   let end = list.length - 1;
+  let count = 1;
 
   while (start <= end) {
+    count++;
     const mid = Math.floor((start + end) / 2);
     if (list[mid] == target) {
-      return true
+      return console.log(count)
     } else if (list[mid] < target) {
       start = mid + 1;
     } else {
@@ -16,6 +18,6 @@ function search(list, target) {
   }
 }
 
-console.time('bin');
-search(arr, 400000);
-console.timeEnd('bin');
+// console.time('bin');
+search(arr, 7);
+// console.timeEnd('bin');

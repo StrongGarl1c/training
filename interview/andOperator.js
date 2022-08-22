@@ -10,11 +10,11 @@ console.log(1 && 2);
 // 2
 
 console.log(
-  false || (true && true),
-  true && (false || false),
+  false || (0 && 0),
+  false && (true || true),
   2 == 3 || (4 < 0 && 1 == 1),
 );
 
-// true
+// 0
 // false
 // false

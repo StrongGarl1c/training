@@ -8,9 +8,10 @@ class Parent {
 class Child extends Parent {
   constructor() {
     super();
+    // super.parentMethod = console.log(123)
   }
   parentMethod() {
-    console.log('Child method');
+    console.log(123)
   }
 }
 

@@ -24,3 +24,22 @@ class Button {
 
 const btn = new Button();
 console.log(btn);
+
+// const obj = {
+//   a: 'obj2',
+//   regA: function(){
+//     alert(this.a)
+//   },
+//   arrA: () => alert(this.a)
+// }
+
+// const a = 'asd'
+
+// function regularA(){
+//   alert(this)
+// }
+
+// const arrowA = () => alert(this)
+
+// document.getElementById('demo4').addEventListener('click', regularA);
+// document.getElementById('demo5').addEventListener('click', arrowA);
