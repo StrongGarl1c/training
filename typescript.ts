@@ -84,28 +84,90 @@
 
 // }
 
-
 // function wind(): void {}
 
+// abstract class Human {
+//   type: string;
+//   name: string;
+//   constructor(name: string){
+//     this.type = 'homo sapiens';
+//     this.name = name;
+//   }
+//   eat(food: string){
+//     console.log(`${this.name} eats ${food}`)
+//   }
+// }
 
-abstract class Human {
-  type: string;
-  name: string;
-  constructor(name: string){
-    this.type = 'homo sapiens';
-    this.name = name;
-  }
-  eat(food: string){
-    console.log(`${this.name} eats ${food}`)
-  }
+// class Person extends Human {
+//   constructor(name: string){
+//     super(name)
+//   }
+// }
+
+// const yaroslav = new Person('Yaroslav');
+// yaroslav.eat('grapes');
+// console.log(yaroslav.name)
+
+// enum swipeDirection {
+//   left = 'left',
+//   right = 'right',
+// }
+
+// function logE(x: swipeDirection): void {
+//   console.log(x)
+// }
+
+// logE(swipeDirection.left)
+
+// function go(fn: Function):void {
+// return fn()
+// }
+
+// function zx(): number {
+//   return 1
+// }
+
+// console.log(go(zx))
+
+// let x: number;
+
+// function zzz(): void {
+// return void (x = 10)
+// }
+// zzz()
+// console.log(x)
+
+
+// function ot(...param: ): void {
+
+// }
+
+interface swipeOptions {
+  elementId?: string;
+  left?: number;
+  top?: number;
 }
 
-class Person extends Human {
-  constructor(name: string){
-    super(name)
-  }
+function op(options: swipeOptions):void {
+  console.log(options)
 }
 
-const yaroslav = new Person('Yaroslav');
-yaroslav.eat('grapes');
-console.log(yaroslav.name)
+function go({left = 100, elementId}: swipeOptions): void {
+  op({left, elementId})
+}
+
+go({})
+go({left:300})
+go({elementId: 'asd'})
+
+interface Box<smth> {
+  name: smth
+}
+
+const b1: Box<string> = {
+  name: 'asd'
+}
+
+const b2: Box<number> = {
+  name: 12
+}
